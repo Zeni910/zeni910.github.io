@@ -1,0 +1,49 @@
+---
+title: "从零开始：AI 辅助下的个人网站搭建之路 | Building My Website with AI"
+date: "2026-02-08"
+categories: [技术]
+---
+
+哪怕是每天和 R/Python 打交道的程序员，面对网页开发也可能是“零基础”。这篇文章记录了我如何在 AI 的帮助下，利用 Quarto 和 GitHub Pages 搭建起这个小世界。
+
+::: panel-tabset
+## 中文
+
+### 为什么要做这个网站？
+
+在这个没朋友圈、没广告的地界，写点纯粹为了好玩、不为交付的项目。这就是我的私人藏书阁，只聊技术和生活，不聊 KPI。
+
+### AI 扮演了什么角色？
+
+-   **克服恐惧**：AI 帮我解释了什么是 YAML，什么是 GitHub Actions。
+
+-   **快速 Debug**：面对复杂的报错（比如之前的 Lightbox 滤镜错误），AI 能给出直达病灶的方案。
+
+### 工具链
+
+-   **Quarto**: 科学写作的神器，完美支持我常用的 R 和 Python。
+-   **GitHub Pages**: 免费且稳定的家。
+-   **Minty Theme**: 一抹清新的薄荷绿，开启我的存档之旅。
+
+## English
+
+### Why this site?
+
+Working as a statistical programmer in pharma demands rigorous logic and unwavering precision. This space is my sanctuary—a corner of the internet free from the noise of social media, where code is written for the sheer joy of creation, not for a deadline.
+
+### The Role of AI
+
+-   **Overcoming the Learning Curve**: AI helped me demystify YAML, GitHub Actions, and Quarto configurations.
+
+-   **Instant Debugging**: Whether it was a Lightbox filter error or a CSS tweak, AI provided direct solutions.
+
+### Tech Stack
+
+-   **Quarto**: An amazing tool for scientific publishing that supports R and Python seamlessly.
+-   **GitHub Pages**: A free and reliable home for my content.
+-   **Minty Theme**: A fresh mint-green aesthetic to start my archiving journey.
+:::
+
+------------------------------------------------------------------------
+
+## \> **结语：** 只要逻辑在，工具就只是翅膀。感谢 AI 的陪伴，让这次“微转行”尝试的第一步走得如此有趣。

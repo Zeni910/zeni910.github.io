@@ -1,0 +1,10 @@
+---
+title: "我的存档 | Posts"
+listing:
+  contents: "."      # 重点：告诉 Quarto 就在当前文件夹(posts)里找子文件夹
+  sort: "date desc"   # 按日期倒序
+  type: grid         # 卡片网格样式
+  categories: true   # 显示分类
+  sort-ui: true      # 允许读者排序
+  filter-ui: true    # 允许读者搜索
+---

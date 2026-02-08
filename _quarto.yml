@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: zh
+
+website:
+  title: "个人空间 | My Archive"
+  
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: 首页 | Home
+      - href: posts/index.qmd  # 存档移到前面
+        text: 存档 | Posts
+      - href: photos.qmd       # 照片墙移到后面
+        text: 影像廊 | Gallery
+    
+    right:
+      - icon: github
+        href: https://github.com/Zeni910
+      - icon: envelope
+        href: mailto:yingx910@hotmail.com
+
+format:
+  html:
+    theme: minty
+    toc: true
+    lightbox: true
+
+search: true

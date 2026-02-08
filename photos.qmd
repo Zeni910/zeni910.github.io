@@ -1,0 +1,40 @@
+---
+title: "影像廊 | Gallery"
+engine: knitr
+format:
+  html:
+    page-layout: full
+---
+
+在这里，我用镜头记录逻辑之外的温柔。
+
+::: {layout-ncol=3 .lightbox}
+
+```{r}
+#| echo: false
+#| results: asis
+
+# 1. 确认文件夹名称
+img_dir <- "images/photos_data"
+
+# 2. 如果文件夹不存在，给个提示防止报错
+if (!dir.exists(img_dir)) {
+  cat("提示：请在项目根目录创建 photos_data 文件夹并放入图片。")
+} else {
+  # 3. 读取图片
+  all_images <- list.files(img_dir, 
+                           pattern = "\\.(jpg|jpeg|png|JPG|PNG|webp)$", 
+                           full.names = TRUE)
+  if (length(all_images) > 0) {
+    # 按照修改时间排序
+    all_images <- all_images[order(file.info(all_images)$mtime, decreasing = TRUE)]
+    
+    # 4. 输出标准 Markdown 格式 ![]()
+    res <- paste0("![](", all_images, ")")
+    cat(res, sep = "\n\n")
+  } else {
+    cat("文件夹内暂无图片。")
+  }
+}
+```
+---

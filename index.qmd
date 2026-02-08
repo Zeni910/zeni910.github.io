@@ -1,0 +1,120 @@
+---
+title: " 欢迎来到我的空间 ｜Welcome to My Space "
+listing:
+  - id: latest-posts
+    contents: "posts/*/index.qmd"
+    sort: "date desc"
+    type: table
+    max-items: 5
+    fields: [title, date]
+    field-display-names:
+      title: ""
+      date: ""
+    sort-ui: false
+    filter-ui: false
+  
+---
+
+<style>
+/* 隐藏表格的头部（表头行） */
+thead {
+  display: none;
+}
+/* 去掉表格多余的边框和间距 */
+.quarto-listing-table {
+  border-top: none !important;
+}
+.table {
+  --bs-table-bg: transparent;
+}
+</style>
+
+:::::: grid
+::: {.g-col-12 .g-col-md-4}
+![](images/avatar.jpg){style="border-radius: 50%; width: 200px; border: 3px solid #d1e7dd;"}
+:::
+
+:::: {.g-col-12 .g-col-md-8}
+::: panel-tabset
+## 中文介绍
+
+### 🧬 关于我
+
+-   **职业：** 药企统计编程师 (Statistical Programmer)
+-   **技术：** 精通 **R** , **SAS** 与 **Python**。
+
+### 🐰 生活点滴
+
+-   **养兔五年：** 资深兔奴，家有五岁多的大白兔。
+-   **NS玩家：** 最近沉迷动森，建设自己的小岛中。
+-   **爱好：** 旅游、摄影、甜品烘焙。
+
+## English self introduction
+
+### 🧬 About Me
+
+-   **Profession:** Statistical Programmer in Pharma
+-   **Tech Stack:** Proficient in **R** and **Python**. I specialize in clinical data programming and enjoy turning complex data into meaningful stories.
+
+### 🐰 Life Beyond Code
+
+-   **Rabbit Lover:** Proud rabbit owner for 5 years. I've learned patience and precision from my long-eared companions.
+-   **Nitendo Switch Player:** Currently building my island on Animal Crossing.
+-   **Hobbies:** Travel, photography and baking.
+:::
+::::
+::::::
+
+------------------------------------------------------------------------
+
+
+## 📝 个人存档 | Recent Posts
+
+::: {#latest-posts}
+:::
+
+[查看更多文章 | View All Posts ->](posts/index.qmd){.btn .btn-outline-primary .btn-sm role="button"}
+
+---
+
+## 📸 影像廊 | Gallery
+
+::: {layout-ncol=3 .lightbox}
+```{r}
+#| echo: false
+#| results: asis
+
+# 1. 设置路径（请确保文件夹名准确）
+img_dir <- "images/photos_data"
+
+# 2. 检查并读取
+if (dir.exists(img_dir)) {
+  # 抓取常见图片格式
+  all_imgs <- list.files(img_dir, 
+                         pattern = "\\.(jpg|jpeg|png|JPG|PNG|webp)$", 
+                         full.names = TRUE)
+  
+  if (length(all_imgs) > 0) {
+    # 按文件修改时间倒序排列（最新的在前）
+    all_imgs <- all_imgs[order(file.info(all_imgs)$mtime, decreasing = TRUE)]
+    
+    # 只取前 9 张作为预览
+    preview <- head(all_imgs, 9)
+    
+    # 输出 Markdown 语法: ![](/path/to/img)
+    cat(paste0("![](", preview, ")"), sep = "\n\n")
+  } else {
+    cat("照片文件夹是空的。")
+  }
+} else {
+  cat("找不到照片文件夹：photos_data")
+}
+```
+:::
+
+### [点击进入影像廊 ->](photos.qmd)
+存放我镜头下的旅行风景、烘焙作品和兔兔瞬间
+
+---
+
+------------------------------------------------------------------------
